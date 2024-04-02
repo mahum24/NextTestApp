@@ -14,7 +14,7 @@ export default function PendingApprovals() {
 
     const renderTableRows = () => {
         return data.map((item, index) => (
-            <tr className="text-xs text-[#9d9c9e] font-semibold">
+            <tr key={index} className="text-xs text-[#9d9c9e] font-semibold">
                 <td className="pt-2 pb-3 border-b-2 flex items-center h-[100%] mb-[-1px]">
                     <Image
                         src="/profile.jpeg"
