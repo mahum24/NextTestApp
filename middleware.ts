@@ -1,11 +1,8 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import Cookies from 'js-cookie';
 
-// This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
     const storedUserData = request.cookies.get('user');
-    console.log("data", storedUserData)
     const LoggedInUserNotAccessPaths = request.nextUrl.pathname == "/Login"
     if (LoggedInUserNotAccessPaths) {
         if (storedUserData != undefined) {
